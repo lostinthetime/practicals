@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 using namespace std;
 class Details{
 	public:
@@ -14,10 +15,14 @@ class Details{
 };
 int main()
 {
-  	Details arr = (Details)(malloc(sizeof(Details)*3)); 
-    for (int i = 0; i < 3; i++) {
-        arr[i] = Details("Ramesh","Daresh","Dehradun",123,345);
+  	Details* arr = (Details*)(malloc(sizeof(Details)*3)); 
+	string names[3] = {"Ramesh","Ganesh","Suresh"};    
+for (int i = 0; i < 3; i++) {
+        arr[i] = Details(names[i],"Daresh","Dehradun",123,345);
     }
+	for(int i=0;i<3;i++){
+	cout << arr[i].name << endl;
+}
 
     return 0;
 }
