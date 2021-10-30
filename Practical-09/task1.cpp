@@ -1,9 +1,7 @@
 #include <iostream>
 using namespace std;
 
-class Shape{
-	private:
-	int l,b;
+class Student{
 	public:
 	int printValues(){
 		cout << this->name << endl;
