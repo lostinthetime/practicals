@@ -32,5 +32,6 @@ int main() {
     objA.display();
     objB.display1();
     objC.display2();
-    // objD.display(); This will cause error because of ambiguity
+    objD.display(); 
+    // This will cause error because of ambiguity
 }
